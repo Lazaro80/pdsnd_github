@@ -6,9 +6,9 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
-VALID_CITIES = ['chicago', 'new york city', 'washington']
-VALID_MONTHS = ['january', 'february', 'march', 'april', 'may', 'june']  
-VALID_WEEK_DAYS = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']  
+CITIES = ['chicago', 'new york city', 'washington']
+MONTHS = ['january', 'february', 'march', 'april', 'may', 'june']  
+WEEK_DAYS = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']  
     
 def get_filters():
     """
@@ -22,17 +22,17 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs   
     input_city = input('Please type a city to analyze (chicago, new york city, washington): ').lower()
-    while(input_city not in VALID_CITIES):
+    while(input_city not in CITIES):
         input_city = input('Please type a VALID city from the list to analyze (chicago, new york city, washington): ').lower()
     
     # TO DO: get user input for month (all, january, february, ... , june)    
     input_month = input('Please type the month (by name) up to june or type ''all'': ').lower()
-    while(input_month not in VALID_MONTHS and input_month != 'all'):
+    while(input_month not in MONTHS and input_month != 'all'):
         input_month = input('Please type a VALID month by name up to june. ie: ''february'': ').lower()    
     
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)    
     input_day = input('Please type the day of week (by name) or type ''all'': ').lower()
-    while(input_day not in VALID_WEEK_DAYS and input_day != 'all'):
+    while(input_day not in WEEK_DAYS and input_day != 'all'):
         input_day = input('Please type a VALID day by name. ie: ''monday'': ').lower()  
         
     print('-'*40)
@@ -64,7 +64,7 @@ def load_data(city, month, day):
     # filter by month if applicable
     if month != 'all':
         # use the index of the months list to get the corresponding int
-        month = VALID_MONTHS.index(month) + 1
+        month = MONTHS.index(month) + 1
     
         # filter by month to create the new dataframe
         df = df[df['month'] == month]
