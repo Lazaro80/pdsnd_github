@@ -184,14 +184,14 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         
-        print_raw_data = input('\nWould you like to print raw data? Enter yes or no.\n').lower()
-        while(print_raw_data not in ['yes','no']):  
-            print_raw_data = input('\nWould you like to print raw data? Enter yes or no.\n').lower()
-        if(print_raw_data == 'yes'):
+        print_raw_data = input('\nWould you like to print raw data? Enter yes (y) or no (n).\n').lower()
+        while(print_raw_data not in ['y','n']):  
+            print_raw_data = input('\nWould you like to print raw data? Enter yes (y) or no (n).\n').lower()
+        if(print_raw_data == 'y'):
             raw_data(df)    
                
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        restart = input('\nWould you like to restart? Enter yes (y) or no (n).\n')
+        if restart.lower() != 'y':
             break
        
 
