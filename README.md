@@ -25,3 +25,6 @@ It also prints raw data to be further analised
 ### Credits
 [Udacity repo](https://github.com/udacity/pdsnd_github)
 
+### Author
+*Lázaro Moreno Puente* 
+
